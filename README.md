@@ -16,5 +16,5 @@ Getting Started
 Clone or download the repository
 bash
 Copy code
-https://github.com/[username]/tourist-place-application.git
+https://github.com/Marajul-BS23/tourist-place-application.git
 Open the index.html file in your browser
