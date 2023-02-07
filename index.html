@@ -2,15 +2,16 @@
     <head>
         <title>Tourist Place</title>
         <link rel="stylesheet" href="css/style.css" />
+        <script src="js/script.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="/">Tourist Place</a></li>
+                <li><a href="/">Create</a></li>
+                <li><a href="list.html">List</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
 
@@ -21,9 +22,9 @@
 
             <div class="input_form">
                 <form class="form">
-                    <div class="grid_container">
+                    <div class="grid_container grid_row_1">
                         <div class="grid_item">
-                            <div class="grid_container_2">
+                            <div class="grid_container grid_row_2">
                                 <div class="grid_item">
                                     <label class="input_label">Name:</label>
                                 </div>
@@ -38,7 +39,7 @@
                         </div>
 
                         <div class="grid_item">
-                            <div class="grid_container_2">
+                            <div class="grid_container grid_row_2">
                                 <div class="grid_item">
                                     <label class="input_label">Address:</label>
                                 </div>
@@ -53,7 +54,7 @@
                         </div>
 
                         <div class="grid_item">
-                            <div class="grid_container_2">
+                            <div class="grid_container grid_row_2">
                                 <div class="grid_item">
                                     <label class="input_label">Rating:</label>
                                 </div>
@@ -68,7 +69,7 @@
                         </div>
 
                         <div class="grid_item">
-                            <div class="grid_container_2">
+                            <div class="grid_container grid_row_2">
                                 <div class="grid_item">
                                     <label class="input_label">Type:</label>
                                 </div>
@@ -84,7 +85,7 @@
                         </div>
 
                         <div class="grid_item">
-                            <div class="grid_container_2">
+                            <div class="grid_container grid_row_2">
                                 <div class="grid_item">
                                     <label class="input_label">Picture:</label>
                                 </div>
@@ -99,8 +100,10 @@
                             </div>
                         </div>
                         <div class="grid_item">
-                            <button class="btn submit">Submit</button>
-                            <button class="btn reset">Reset</button>
+                            <div class="flex">
+                                <button class="btn submit">Submit</button>
+                                <button class="btn reset">Reset</button>
+                            </div>
                         </div>
                     </div>
                 </form>
