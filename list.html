@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <title>Tourist Place list</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">Tourist Place</a></li>
+                <li><a href="/">Create</a></li>
+                <li><a href="#">List</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="header">
+                <h1>List of places</h1>
+            </div>
+            <table class="place_table">
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Rating</th>
+                    <th>Picture</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>Place 1</td>
+                    <td>Address 1</td>
+                    <td>1</td>
+                    <td>
+                        <img class="table_img" src="/img/1.jpg" alt="Place 1" />
+                    </td>
+                    <td>
+                        <button href="#" class="btn update">Update</button>
+                        <button href="#" class="btn delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Place 1</td>
+                    <td>Address 1</td>
+                    <td>2</td>
+                    <td>
+                        <img class="table_img" src="/img/1.jpg" alt="Place 1" />
+                    </td>
+                    <td>
+                        <button href="#" class="btn update">Update</button>
+                        <button href="#" class="btn delete">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <span class="close">&times;</span>
+                    <h2>Edit Place</h2>
+                </div>
+                <div class="modal_body">
+                    <div class="input_form">
+                        <form class="form">
+                            <div class="grid_container grid_row_1">
+                                <div class="grid_item">
+                                    <div class="grid_container grid_row_2">
+                                        <div class="grid_item">
+                                            <label class="input_label"
+                                                >Name:</label
+                                            >
+                                        </div>
+                                        <div class="grid_item">
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                class="input_box"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid_item">
+                                    <div class="grid_container grid_row_2">
+                                        <div class="grid_item">
+                                            <label class="input_label"
+                                                >Address:</label
+                                            >
+                                        </div>
+                                        <div class="grid_item">
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                class="input_box"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid_item">
+                                    <div class="grid_container grid_row_2">
+                                        <div class="grid_item">
+                                            <label class="input_label"
+                                                >Rating:</label
+                                            >
+                                        </div>
+                                        <div class="grid_item">
+                                            <input
+                                                type="number"
+                                                name="name"
+                                                class="input_box"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid_item">
+                                    <div class="grid_container grid_row_2">
+                                        <div class="grid_item">
+                                            <label class="input_label"
+                                                >Type:</label
+                                            >
+                                        </div>
+                                        <div class="grid_item">
+                                            <select
+                                                name="type"
+                                                class="input_box"
+                                            >
+                                                <option value="1">Beach</option>
+                                                <option value="2">Hills</option>
+                                                <option value="3">
+                                                    Fountain
+                                                </option>
+                                                <option value="4">
+                                                    Landmark
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid_item">
+                                    <div class="grid_container grid_row_2">
+                                        <div class="grid_item">
+                                            <label class="input_label"
+                                                >Picture:</label
+                                            >
+                                        </div>
+                                        <div class="grid_item">
+                                            <input
+                                                type="file"
+                                                id="myFile"
+                                                name="filename"
+                                                class="input_box"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid_item">
+                                    <div class="flex">
+                                        <button class="btn submit">
+                                            Submit
+                                        </button>
+                                        <button class="btn reset">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
