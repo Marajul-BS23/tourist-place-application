@@ -16,6 +16,10 @@
             </ul>
         </nav>
 
+        <div id="toast" class="toast">
+            <p id="toast-message"></p>
+        </div>
+
         <!-- Code for generating table -->
 
         <div class="container">
@@ -69,7 +73,16 @@
                 </div>
                 <div class="modal_body">
                     <div class="input_form">
-                        <form class="form">
+                        <form
+                            class="form"
+                            name="update_form"
+                            onsubmit="return updatePlace()"
+                        >
+                            <input
+                                type="hidden"
+                                name="modal_id"
+                                id="modal_id"
+                            />
                             <div class="grid_container grid_row_1">
                                 <div class="grid_item">
                                     <div class="grid_container grid_row_2">
@@ -115,12 +128,18 @@
                                             >
                                         </div>
                                         <div class="grid_item">
-                                            <input
+                                            <select
                                                 id="modal_rating"
                                                 type="number"
                                                 name="modal_rating"
                                                 class="input_box"
-                                            />
+                                            >
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -163,18 +182,33 @@
                                             >
                                         </div>
                                         <div class="grid_item">
-                                            <input
-                                                id="modal_picture"
-                                                type="file"
-                                                name="filename"
-                                                class="input_box"
-                                            />
+                                            <div style="display: flex">
+                                                <input
+                                                    type="file"
+                                                    id="modal_file"
+                                                    name="modal_file"
+                                                    class=""
+                                                    onchange="previewModalFile()"
+                                                    accept="image/*"
+                                                />
+
+                                                <img
+                                                    id="previewModalImg"
+                                                    alt="image"
+                                                    style="display: block"
+                                                    height="100px"
+                                                    width="100px"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="grid_item">
                                     <div class="flex">
-                                        <button class="btn submit">
+                                        <button
+                                            class="btn submit"
+                                            type="submit"
+                                        >
                                             Update
                                         </button>
                                         <button class="btn reset">Reset</button>
@@ -199,7 +233,9 @@
                     <button onclick="closeWarningModal()" class="cancel-btn">
                         Cancel
                     </button>
-                    <button class="confirm-btn">Confirm</button>
+                    <button onclick="deleteItem()" class="confirm-btn">
+                        Confirm
+                    </button>
                 </div>
             </div>
         </div>

@@ -15,13 +15,22 @@
             </ul>
         </nav>
 
+        <div id="toast" class="toast">
+            <p id="toast-message"></p>
+        </div>
+
         <div class="container">
             <div class="header">
-                <h1>Add a new Tourist Place</h1>
+                <p style="font-size: 20px">Add a new Tourist Place</p>
             </div>
 
             <div class="input_form">
-                <form class="form">
+                <form
+                    name="createForm"
+                    class="form"
+                    id="createForm"
+                    onsubmit=" return createPlace()"
+                >
                     <div class="grid_container grid_row_1">
                         <div class="grid_item">
                             <div class="grid_container grid_row_2">
@@ -33,6 +42,7 @@
                                         type="text"
                                         name="name"
                                         class="input_box"
+                                        required
                                     />
                                 </div>
                             </div>
@@ -46,8 +56,9 @@
                                 <div class="grid_item">
                                     <input
                                         type="text"
-                                        name="name"
+                                        name="address"
                                         class="input_box"
+                                        required
                                     />
                                 </div>
                             </div>
@@ -59,11 +70,17 @@
                                     <label class="input_label">Rating:</label>
                                 </div>
                                 <div class="grid_item">
-                                    <input
-                                        type="number"
-                                        name="name"
+                                    <select
+                                        name="rating"
                                         class="input_box"
-                                    />
+                                        required
+                                    >
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -75,10 +92,14 @@
                                 </div>
                                 <div class="grid_item">
                                     <select name="type" class="input_box">
-                                        <option value="1">Beach</option>
-                                        <option value="2">Hills</option>
-                                        <option value="3">Fountain</option>
-                                        <option value="4">Landmark</option>
+                                        <option value="Beach">Beach</option>
+                                        <option value="Hills">Hills</option>
+                                        <option value="Fountain">
+                                            Fountain
+                                        </option>
+                                        <option value="Landmark">
+                                            Landmark
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -90,19 +111,36 @@
                                     <label class="input_label">Picture:</label>
                                 </div>
                                 <div class="grid_item">
-                                    <input
-                                        type="file"
-                                        id="myFile"
-                                        name="filename"
-                                        class="input_box"
-                                    />
+                                    <div style="display: flex">
+                                        <input
+                                            type="file"
+                                            id="myFile"
+                                            name="filename"
+                                            class=""
+                                            required
+                                            onchange="previewFile()"
+                                            accept="image/*"
+                                        />
+
+                                        <img
+                                            id="previewImg"
+                                            alt="image"
+                                            style="display: none"
+                                            height="100px"
+                                            width="100px"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="grid_item">
                             <div class="flex">
-                                <button class="btn submit">Submit</button>
-                                <button class="btn reset">Reset</button>
+                                <button type="submit" class="btn submit">
+                                    Submit
+                                </button>
+                                <button onclick="ResetForm()" class="btn reset">
+                                    Reset
+                                </button>
                             </div>
                         </div>
                     </div>

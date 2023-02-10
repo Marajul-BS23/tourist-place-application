@@ -252,3 +252,13 @@ nav a {
     background-color: tomato;
     color: white;
 }
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 5px;
+    display: none;
+}
